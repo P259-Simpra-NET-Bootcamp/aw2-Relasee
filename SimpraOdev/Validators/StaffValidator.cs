@@ -7,15 +7,15 @@ namespace SimpraOdev.Validators
     {
         public StaffValidator()
         {
-            RuleFor(s => s.FirstName).NotEmpty();
-            RuleFor(s => s.LastName).NotEmpty();
-            RuleFor(s => s.Email).NotEmpty().EmailAddress();
-            RuleFor(s => s.Phone).NotEmpty();
-            RuleFor(s => s.DateOfBirth).NotEmpty();
-            RuleFor(s => s.AddressLine1).NotEmpty();
-            RuleFor(s => s.City).NotEmpty();
-            RuleFor(s => s.Country).NotEmpty();
-            RuleFor(s => s.Province).NotEmpty();
+            RuleFor(s => s.FirstName).NotEmpty().WithMessage("First name cannot be empty!");
+            RuleFor(s => s.LastName).NotEmpty().WithMessage("Last name cannot be empty!");
+            RuleFor(s => s.Email).NotEmpty().EmailAddress().WithMessage("Email cannot be empty!");
+            RuleFor(s => s.Phone).NotEmpty().WithMessage("Phone cannot be empty!");
+            RuleFor(s => s.DateOfBirth).NotEmpty().WithMessage("DOB  cannot be empty!");
+            RuleFor(s => s.AddressLine1).NotEmpty().WithMessage("Address cannot be empty!");
+            RuleFor(s => s.City).NotEmpty().WithMessage("City cannot be empty!");
+            RuleFor(s => s.Country).NotEmpty().WithMessage("Country  cannot be empty!");
+            RuleFor(s => s.Province).NotEmpty().WithMessage("Province cannot be empty!");
         }
     }
 }
